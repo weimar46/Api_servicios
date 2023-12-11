@@ -31,7 +31,13 @@ const servicioSchema = ({
     },
     precioDolar:{
         type:Number,
+    },
+    observaciones:{
+        type:String,
+        required:[true, 'La fecha fin de la servicios es requeriad'],
+
     }
+
     
 })
 

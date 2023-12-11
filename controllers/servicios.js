@@ -28,7 +28,7 @@ const postServicio = async(req, res) => {
 
 
 const putServicio = async(req, res) =>{
-    const {idServicio,nombreServicio,precioServicio, frecuenciaServicio, fechaInicio,fechaFin} = req.body
+    const {idServicio,nombreServicio,precioServicio, frecuenciaServicio, fechaInicio,fechaFin,precioDolar,observaciones } = req.body
     try {
         const servicio = await Servicio.findOneAndUpdate({idServicio: idServicio},{
             nombreServicio: nombreServicio,
@@ -37,6 +37,7 @@ const putServicio = async(req, res) =>{
             fechaInicio:fechaInicio,
             fechaFin: fechaFin,
             precioDolar: precioDolar,
+            observaciones: observaciones,
 
 
         });//las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio
